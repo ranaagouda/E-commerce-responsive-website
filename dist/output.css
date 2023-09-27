@@ -132,10 +132,6 @@
   top: 0px;
 }
 
-.z-10{
-  z-index: 10;
-}
-
 .z-20{
   z-index: 20;
 }
@@ -245,16 +241,16 @@
   width: 2.5rem;
 }
 
+.w-16{
+  width: 4rem;
+}
+
 .w-32{
   width: 8rem;
 }
 
 .w-4{
   width: 1rem;
-}
-
-.w-5{
-  width: 1.25rem;
 }
 
 .w-8{
@@ -279,10 +275,6 @@
 
 .origin-\[0_0\]{
   transform-origin: 0 0;
-}
-
-.cursor-pointer{
-  cursor: pointer;
 }
 
 .flex-row{
@@ -335,15 +327,6 @@
   border-width: 0px;
 }
 
-.border-t-2{
-  border-top-width: 2px;
-}
-
-.border-neutral-100{
-  --tw-border-opacity: 1;
-  border-color: rgb(245 245 245 / var(--tw-border-opacity));
-}
-
 .bg-primary{
   --tw-bg-opacity: 1;
   background-color: rgb(242 78 41 / var(--tw-bg-opacity));
@@ -360,10 +343,6 @@
 
 .bg-none{
   background-image: none;
-}
-
-.fill-infoColor{
-  fill: #359aa7;
 }
 
 .fill-primary{
@@ -409,11 +388,6 @@
   padding-right: 1.5rem;
 }
 
-.py-3{
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
 .py-5{
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -438,10 +412,6 @@
 
 .pt-\[0\.37rem\]{
   padding-top: 0.37rem;
-}
-
-.text-left{
-  text-align: left;
 }
 
 .text-center{
@@ -469,11 +439,6 @@
 .text-5xl{
   font-size: 3rem;
   line-height: 1;
-}
-
-.text-lg{
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 
 .text-xs{
@@ -632,6 +597,7 @@
     backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+  text-align: center;
 }
 
 .buttonstyle:hover {
@@ -667,17 +633,15 @@
   display: flex;
   flex-direction: column;
   gap: 0.25rem /* 4px */;
-  margin-bottom: 3.5rem /* 56px */;
   padding: 1.25rem /* 20px */;
 }
 
 .title {
-  margin-bottom: 0.5rem /* 8px */;
   font-size: 1.25rem /* 20px */;
   line-height: 1.25;
   font-weight: 500;
-  color: #0000;
-  height: 4rem /* 64px */;
+  color: black;
+  height: 5rem /* 64px */;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -726,7 +690,6 @@
 }
 
 .addToCart {
-  padding: 1.25rem /* 20px */;
   font-weight: 700;
   width: 100%;
   background-color: transparent;
