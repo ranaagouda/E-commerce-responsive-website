@@ -47,6 +47,7 @@ const loadProducts = (category) => {
         // title
         let title = document.createElement("h5");
         title.classList.add("title");
+        console.log("title", product.title);
         title.textContent = product.title;
         content.append(title);
         // p
@@ -57,65 +58,28 @@ const loadProducts = (category) => {
         // price
         let price = document.createElement("p");
         price.classList.add("price");
-        price.textContent = product.title;
+        price.textContent = product.price + " $";
         content.append(price);
+        // info
+        let info = document.createElement("div");
+        info.classList.add("info");
+        productContainer.append(info);
+        // addToCart
+        let addToCart = document.createElement("button");
+        addToCart.classList.add("addToCart");
+        addToCart.textContent = "Add to cart";
+        info.append(addToCart);
+        // i
+        let i = document.createElement("i");
+        i.setAttribute("class", "fa-solid fa-cart-plus");
+        i.classList.add("i");
+        info.append(i);
       });
     })
     .catch((err) => {
       console.error(err);
     });
 };
-
-// //Render products function
-// function renderProducts(products) {
-//   let productsContainer = document.getElementsByClassName("products")[0];
-//   productsContainer.innerHTML = "";
-//   products.forEach((product) => {
-//     let productContainer = document.createElement("div");
-//     productContainer.setAttribute("class", "product");
-//     productsContainer.append(productContainer);
-//     // ____________________
-//     let imageContainer = document.createElement("div");
-//     imageContainer.classList.add("image-container");
-//     let productImage = document.createElement("img");
-//     productImage.src = product.image;
-//     imageContainer.append(productImage);
-//     productContainer.append(imageContainer);
-//     // ____________________
-//     let productContent = document.createElement("div");
-//     productContent.setAttribute("class", "content");
-//     productContainer.append(productContent);
-//     // ____________________
-//     let productTitleDiv = document.createElement("div");
-//     productTitleDiv.setAttribute("class", "product-title-div");
-//     let productTitle = document.createElement("h3");
-//     productTitle.textContent = product.title;
-//     productTitleDiv.append(productTitle);
-//     productContent.append(productTitleDiv);
-
-//     // ____________________
-//     let descriptionDiv = document.createElement("div");
-//     descriptionDiv.classList.add("description-container");
-//     let productDescription = document.createElement("p");
-//     productDescription.textContent = product.description;
-//     descriptionDiv.append(productDescription);
-//     productContent.append(descriptionDiv);
-//     // ____________________
-//     let productPrice = document.createElement("p");
-//     productPrice.setAttribute("class", "price");
-//     productPrice.textContent = product.price + " $";
-//     productContent.append(productPrice);
-//     // ____________________
-
-//     let productInfo = document.createElement("div");
-//     productInfo.setAttribute("class", "info");
-//     productContainer.append(productInfo);
-//     // ____________________
-//     let addToCart = document.createElement("button");
-//     addToCart.setAttribute("class", "add-to-cart");
-//     addToCart.textContent = "Add to cart";
-//     productInfo.append(addToCart);
-//     // ------------
 
 //     //add to cart
 //     addToCart.onclick = function () {
@@ -127,11 +91,6 @@ const loadProducts = (category) => {
 
 //       renderCart(cartProducts);
 //     };
-
-//     // ____________________
-//     let cartIcon = document.createElement("i");
-//     cartIcon.setAttribute("class", "fa-solid fa-cart-plus");
-//     productInfo.append(cartIcon);
 //   });
 // }
 
@@ -147,62 +106,3 @@ const loadProducts = (category) => {
 //     scrollUp.style.display = "none";
 //   }
 // };
-
-/*
-//load categories function
-async function loadCategories() {
-  try {
-    let response = await fetch("https://fakestoreapi.com/products/categories");
-    let categories = await response.json();
-  } catch (error) {
-    console.log("error", error);
-  }
-}
-
-loadCategories();
-
-//  --------- Start of categories --------------- //
-
-//render Categories function
-function renderCategories(categories) {
-  categories.forEach((category) => {
-    let categoriesContainer = document.getElementsByClassName("categories")[0];
-    let catBtn = document.createElement("button");
-    catBtn.classList.add("catBtn");
-    catBtn.textContent = category;
-    catBtn.onclick = function () {
-      loadCategoryProducts(category);
-    };
-    categoriesContainer.append(catBtn);
-  });
-}
-
-//load categories function
-async function loadCategories() {
-  try {
-    let response = await fetch("https://fakestoreapi.com/products/categories");
-    let categories = await response.json();
-    renderCategories(categories);
-    loadCategoryProducts(categories[0]);
-  } catch (error) {
-    console.log("error", error);
-  }
-}
-
-loadCategories();
-
-//  -------------- End of categories ------------------
-
-//load loadCategory Products function
-async function loadCategoryProducts(categoryName) {
-  try {
-    let response = await fetch(
-      `https://fakestoreapi.com/products/category/${categoryName}`
-    );
-    let products = await response.json();
-    renderProducts(products);
-  } catch (error) {
-    console.log("error");
-  }
-}
-*/
