@@ -47,7 +47,6 @@ const loadProducts = (category) => {
         // title
         let title = document.createElement("h5");
         title.classList.add("title");
-        console.log("title", product.title);
         title.textContent = product.title;
         content.append(title);
         // p
@@ -81,6 +80,19 @@ const loadProducts = (category) => {
     });
 };
 
+//scroll up button
+let scrollUp = document.getElementsByClassName("scroll")[0];
+scrollUp.onclick = function () {
+  window.scrollTo(0, 0);
+};
+window.onscroll = function () {
+  if (document.documentElement.scrollTop > 20) {
+    scrollUp.style.display = "flex";
+  } else {
+    scrollUp.style.display = "none";
+  }
+};
+
 //     //add to cart
 //     addToCart.onclick = function () {
 //       //write cart
@@ -93,16 +105,3 @@ const loadProducts = (category) => {
 //     };
 //   });
 // }
-
-// //scroll button
-// let scrollUp = document.getElementsByClassName("scroll-up")[0];
-// scrollUp.onclick = function () {
-//   window.scrollTo(0, 0);
-// };
-// window.onscroll = function () {
-//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//     scrollUp.style.display = "flex";
-//   } else {
-//     scrollUp.style.display = "none";
-//   }
-// };

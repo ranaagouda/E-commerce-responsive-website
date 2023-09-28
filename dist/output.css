@@ -124,12 +124,20 @@
   left: 0.75rem;
 }
 
+.left-full{
+  left: 100%;
+}
+
 .right-0{
   right: 0px;
 }
 
 .top-0{
   top: 0px;
+}
+
+.right-full{
+  right: 100%;
 }
 
 .z-20{
@@ -150,6 +158,10 @@
 
 .m-14{
   margin: 3.5rem;
+}
+
+.m-2{
+  margin: 0.5rem;
 }
 
 .my-10{
@@ -205,8 +217,8 @@
   height: 7rem;
 }
 
-.h-4{
-  height: 1rem;
+.h-5{
+  height: 1.25rem;
 }
 
 .h-8{
@@ -241,16 +253,16 @@
   width: 2.5rem;
 }
 
-.w-16{
-  width: 4rem;
+.w-14{
+  width: 3.5rem;
 }
 
 .w-32{
   width: 8rem;
 }
 
-.w-4{
-  width: 1rem;
+.w-5{
+  width: 1.25rem;
 }
 
 .w-8{
@@ -263,14 +275,6 @@
 
 .w-full{
   width: 100%;
-}
-
-.w-12{
-  width: 3rem;
-}
-
-.w-14{
-  width: 3.5rem;
 }
 
 .max-w-\[90\%\]{
@@ -369,6 +373,10 @@
   padding: 5rem;
 }
 
+.p-3{
+  padding: 0.75rem;
+}
+
 .p-4{
   padding: 1rem;
 }
@@ -381,8 +389,9 @@
   padding: 1.5rem;
 }
 
-.p-3{
-  padding: 0.75rem;
+.px-16{
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 .px-20{
@@ -408,11 +417,6 @@
 .py-\[0\.32rem\]{
   padding-top: 0.32rem;
   padding-bottom: 0.32rem;
-}
-
-.px-16{
-  padding-left: 4rem;
-  padding-right: 4rem;
 }
 
 .pb-2{
@@ -458,14 +462,14 @@
   line-height: 1;
 }
 
-.text-xs{
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-bold{
@@ -602,8 +606,8 @@
   display: flex;
   border-radius: 0.25rem /* 4px */;
   background-color: rgb(53 154 167/ 0.3);
-  padding: 0.5rem;
-  margin: 2.5rem 0.75rem 1rem /* 28px */;
+  padding: 10px;
+  margin: 60px 10px 20px /* 28px */;
   font-size: 1.25rem /* 20px */;
   font-weight: 500;
   color: rgb(0 0 0);
@@ -619,8 +623,9 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   text-align: center;
-  vertical-align: middle;
+  align-items: center;
   height: 45px;
+  overflow: visible;
 }
 
 .buttonstyle:hover {
@@ -641,6 +646,7 @@
   position: relative;
   overflow: hidden;
   width: 16rem /* 256px */;
+  height: 550px;
   margin: 0 12px;
   display: flex;
   flex-direction: column;
