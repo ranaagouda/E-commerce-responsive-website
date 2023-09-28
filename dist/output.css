@@ -201,6 +201,10 @@
   height: 6rem;
 }
 
+.h-28{
+  height: 7rem;
+}
+
 .h-4{
   height: 1rem;
 }
@@ -209,16 +213,12 @@
   height: 2rem;
 }
 
-.h-96{
-  height: 24rem;
-}
-
 .h-auto{
   height: auto;
 }
 
 .h-hh{
-  height: 750px;
+  height: 400px;
 }
 
 .max-h-full{
@@ -581,10 +581,9 @@
   border-radius: 0.25rem /* 4px */;
   background-color: rgb(53 154 167/ 0.3);
   padding: 0.5rem;
-  margin: 2rem 1rem /* 28px */;
-  font-size: 1.875rem /* 30px */;
+  margin: 2.5rem 0.75rem 1rem /* 28px */;
+  font-size: 1.25rem /* 20px */;
   font-weight: 500;
-  line-height: 1.5;
   color: rgb(0 0 0);
   transition-property: color, background-color, border-color,
     text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
@@ -598,6 +597,8 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   text-align: center;
+  vertical-align: middle;
+  height: 45px;
 }
 
 .buttonstyle:hover {
@@ -893,10 +894,6 @@
 }
 
 @media (min-width: 1024px){
-  .lg\:h-hh{
-    height: 750px;
-  }
-
   .lg\:text-left{
     text-align: left;
   }

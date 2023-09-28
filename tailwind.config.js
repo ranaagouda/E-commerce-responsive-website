@@ -14,7 +14,7 @@ module.exports = {
         body: ["Cairo"],
       },
       height: {
-        hh: "750px",
+        hh: "400px",
       },
     },
   },
