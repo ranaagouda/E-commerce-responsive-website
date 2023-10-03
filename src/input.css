@@ -7,9 +7,9 @@
 .buttonstyle {
   display: flex;
   border-radius: 0.25rem /* 4px */;
-  background-color: rgb(53 154 167/ 0.3);
-  padding: 10px;
-  margin: 60px 10px 20px /* 28px */;
+  background-color: rgba(104, 177, 186, 0.3);
+  padding: 5px 10px;
+  margin: 30px 10px 20px /* 28px */;
   font-size: 1.25rem /* 20px */;
   font-weight: 500;
   color: rgb(0 0 0);
@@ -20,8 +20,8 @@
   transition-duration: 150ms;
   text-align: center;
   align-items: center;
+  white-space: nowrap;
   height: 45px;
-  overflow: visible;
 }
 .buttonstyle:hover {
   color: #f24e29;
@@ -39,7 +39,7 @@
   position: relative;
   overflow: hidden;
   width: 16rem /* 256px */;
-  height: 550px;
+  height: 600px;
   margin: 0 12px;
   display: flex;
   flex-direction: column;
@@ -49,6 +49,7 @@
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  flex-wrap: nowrap;
 }
 .content {
   display: flex;
@@ -64,6 +65,7 @@
   height: 5rem /* 64px */;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-bottom: 3px;
 }
 .p {
   overflow: hidden;
@@ -79,6 +81,7 @@
   height: 240px;
   object-fit: contain;
   padding: 1.25rem /* 20px */;
+  align-content: center;
 }
 .price {
   --tw-text-opacity: 1;
@@ -113,9 +116,39 @@
   color: rgb(53 154 167 / var(--tw-text-opacity));
 }
 .i {
-  width: 1.25rem /* 20px */;
-  fill: #359aa7;
+  width: 40px;
+  height: 40px;
+  color: #359aa7;
   font-size: 1.125rem /* 18px */;
-  line-height: 1.75rem /* 28px */;
+  font-weight: 900;
   padding: 1.25rem /* 20px */;
+}
+.cartProduct {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.25rem /* 20px */;
+  gap: 1.25rem /* 20px */;
+  border-bottom: 1px solid #77777741;
+}
+.imageBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem /* 4px */;
+}
+.description {
+  --tw-text-opacity: 1;
+  color: rgb(119 119 119 / var(--tw-text-opacity));
+  font-size: 0.875rem /* 14px */;
+  line-height: 1.25rem /* 20px */;
+  height: 40px;
+  overflow: hidden;
+  width: 250px;
 }
