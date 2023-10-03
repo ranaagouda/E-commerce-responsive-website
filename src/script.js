@@ -1,3 +1,38 @@
+let cartProducts = [];
+
+/////////     render cart items    ///////////
+const renderCart = (product) => {
+  let cart = document.getElementById("cart");
+  // cartProduct
+  let cartProduct = document.createElement("div");
+  cartProduct.classList.add("cartProduct");
+  cart.append(cartProduct);
+  // imageBox
+  let imageBox = document.createElement("div");
+  imageBox.classList.add("imageBox");
+  cartProduct.append(imageBox);
+  // image
+  let imageCart = document.createElement("img");
+  imageCart.style.objectFit = "contain";
+  imageCart.src = product.image;
+  imageBox.append(imageCart);
+  //text
+  let text = document.createElement("div");
+  text.classList.add("text");
+  cartProduct.append(text);
+  // product description
+  let description = document.createElement("p");
+  description.classList.add("description");
+  description.textContent = product.description;
+  text.append(description);
+  // price
+  let price = document.createElement("p");
+  price.classList.add("price");
+  price.textContent = product.price + " $";
+  text.append(price);
+};
+///////////////////////////////////////////////
+
 /////////     render categories    ///////////
 const renderCategories = (categories) => {
   console.log(categories);
@@ -72,6 +107,11 @@ const renderProducts = (products) => {
     let addToCart = document.createElement("button");
     addToCart.classList.add("addToCart");
     addToCart.textContent = "Add to cart";
+    addToCart.onclick = function () {
+      cartProducts.push(product);
+      console.log("cartProducts", cartProducts);
+      renderCart(product);
+    };
     info.append(addToCart);
     // i
     let i = document.createElement("i");
