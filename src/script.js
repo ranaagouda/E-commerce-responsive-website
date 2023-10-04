@@ -25,12 +25,31 @@ const renderCart = (product) => {
   description.classList.add("description");
   description.textContent = product.description;
   text.append(description);
+  // remove container
+  let removeContainer = document.createElement("div");
+  removeContainer.classList.add("flex", "flex-row", "justify-between", "pt-2");
+  text.append(removeContainer);
   // price
   let price = document.createElement("p");
   price.classList.add("price");
   price.textContent = product.price + " $";
-  text.append(price);
+  removeContainer.append(price);
+  // remove
+  let remove = document.createElement("button");
+  remove.classList.add("removeButton");
+  remove.textContent = "Remove";
+  remove.onclick = function (product) {
+    cartProduct.remove();
+    cartProducts.pop(product);
+    console.log("cartProducts", cartProducts);
+    counter.innerHTML = cartProducts.length;
+  };
+  removeContainer.append(remove);
 };
+///////////////////////////////////////////////
+
+/////////     cart counter    ///////////
+let counter = document.getElementById("cartCounter");
 ///////////////////////////////////////////////
 
 /////////     render categories    ///////////
@@ -111,6 +130,7 @@ const renderProducts = (products) => {
       cartProducts.push(product);
       console.log("cartProducts", cartProducts);
       renderCart(product);
+      counter.innerHTML = cartProducts.length;
     };
     info.append(addToCart);
     // i
