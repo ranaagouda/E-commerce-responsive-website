@@ -56,80 +56,61 @@
       <!-- end header-->
 
       <!-- start contact-->
-      <div
-        class="flex justify-center items-center bg-white p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]"
-      >
-        <form class="w-1/3 h-hh">
-          <h1 class="font-bold flex justify-center p-5 mb-2 text-4xl">
-            Contact-Us
-          </h1>
+      <div class="flex justify-center items-center flex-col pb-10 bg-white p-6">
+        <h1 class="font-bold tracking-[3px] text-4xl mb-5 text-black">
+          Contact-Us
+        </h1>
+        <form class="p-5 w-1/3">
           <!--Name input-->
-          <div class="relative mb-6" data-te-input-wrapper-init>
+          <div class="relative mb-6 bg-red-400">
             <input
+              id="name"
               type="text"
-              class="peer flex min-h-[auto] w-full border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-              id="exampleInput7"
+              class="block min-h-[auto] w-full border-b border-gray-400 bg-[#f9f9f9] p-4 mb-6"
               placeholder="Full Name"
+              required
+              onsubmit="validateName()"
             />
-            <!-- <label
-              for="exampleInput7"
-              class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-              >Name
-            </label> -->
           </div>
           <!--Email input-->
-          <div class="relative mb-6" data-te-input-wrapper-init>
+          <div class="relative mb-6">
             <input
+              id="email"
               type="email"
-              class="peer flex min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-              id="exampleInput8"
+              class="block min-h-[auto] w-full border-b border-gray-400 bg-[#f9f9f9] p-4 mb-6"
               placeholder="Email"
+              required
+              onsubmit="validateEmail()"
             />
-            <!-- <label
-              for="exampleInput8"
-              class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-              >Email address
-            </label> -->
           </div>
           <!--Password input-->
-          <div class="relative mb-6" data-te-input-wrapper-init>
+          <div class="relative mb-6">
             <input
+              id="password"
               type="password"
-              class="peer flex min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-              id="exampleFormControlInputPassword"
+              class="block min-h-[auto] w-full border-b border-gray-400 bg-[#f9f9f9] p-4 mb-6"
               placeholder="Password"
+              required
+              onsubmit="validatePassword()"
             />
-            <!-- <label
-              for="exampleFormControlInputPassword"
-              class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-              >Password input
-            </label> -->
           </div>
           <!--Message textarea-->
-          <div class="relative mb-6" data-te-input-wrapper-init>
+          <div class="relative mb-6">
             <textarea
-              class="peer flex min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-              id="exampleFormControlTextarea13"
+              name="msg"
+              class="block h-52 resize-none w-full border-b border-gray-400 bg-[#f9f9f9] p-4 mb-6"
               rows="3"
             ></textarea>
-            <!-- <label
-              for="exampleFormControlTextarea13"
-              class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-              >Message
-            </label> -->
           </div>
           <!--Submit button-->
           <button
             type="submit"
-            class="dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]] inline-block w-full rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-            data-te-ripple-init
-            data-te-ripple-color="light"
+            class="block p-4 font-bold text-xl cursor-pointer bg-primary text-white w-full"
           >
             Contact-us
           </button>
         </form>
       </div>
-
       <!-- end contact-->
 
       <!-- start footer-->
@@ -145,7 +126,7 @@
       </footer>
       <!-- end footer-->
     </div>
-    <script src="cart.js"></script>
+    <script src="validation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
   </body>
 </html>
