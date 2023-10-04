@@ -152,3 +152,22 @@
   overflow: hidden;
   width: 250px;
 }
+.removeButton {
+  display: flex;
+  border-radius: 0.25rem /* 4px */;
+  background-color: rgba(104, 177, 186, 0.3);
+  padding: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(0 0 0);
+  text-align: center;
+  justify-content: right;
+  align-items: center;
+  white-space: nowrap;
+  height: 25px;
+  width: fit-content;
+}
+.removeButton:hover {
+  background-color: #f24e29;
+  color: white;
+}
