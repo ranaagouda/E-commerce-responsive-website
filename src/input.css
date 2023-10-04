@@ -171,3 +171,17 @@
   background-color: #f24e29;
   color: white;
 }
+.cartCounter {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #f24e29;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 15px;
+  top: 5px;
+  right: 65px;
+}
