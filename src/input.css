@@ -45,7 +45,7 @@
   flex-direction: column;
   border-radius: 0.5rem /* 8px */;
   background-color: white;
-  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow: 5px 20px 30px -10px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -182,6 +182,6 @@
   align-items: center;
   position: absolute;
   font-size: 15px;
-  top: 5px;
-  right: 65px;
+  top: 9px;
+  right: 145px;
 }
