@@ -1,57 +1,3 @@
-let cartProducts = [];
-
-/////////     render cart items    ///////////
-const renderCart = (product) => {
-  let cart = document.getElementById("cart");
-  // cartProduct
-  let cartProduct = document.createElement("div");
-  cartProduct.classList.add("cartProduct");
-  cart.append(cartProduct);
-  // imageBox
-  let imageBox = document.createElement("div");
-  imageBox.classList.add("imageBox");
-  cartProduct.append(imageBox);
-  // image
-  let imageCart = document.createElement("img");
-  imageCart.style.objectFit = "contain";
-  imageCart.src = product.image;
-  imageBox.append(imageCart);
-  //text
-  let text = document.createElement("div");
-  text.classList.add("text");
-  cartProduct.append(text);
-  // product description
-  let description = document.createElement("p");
-  description.classList.add("description");
-  description.textContent = product.description;
-  text.append(description);
-  // remove container
-  let removeContainer = document.createElement("div");
-  removeContainer.classList.add("flex", "flex-row", "justify-between", "pt-2");
-  text.append(removeContainer);
-  // price
-  let price = document.createElement("p");
-  price.classList.add("price");
-  price.textContent = product.price + " $";
-  removeContainer.append(price);
-  // remove
-  let remove = document.createElement("button");
-  remove.classList.add("removeButton");
-  remove.textContent = "Remove";
-  remove.onclick = function (product) {
-    cartProduct.remove();
-    cartProducts.pop(product);
-    console.log("cartProducts", cartProducts);
-    counter.innerHTML = cartProducts.length;
-  };
-  removeContainer.append(remove);
-};
-///////////////////////////////////////////////
-
-/////////     cart counter    ///////////
-let counter = document.getElementById("cartCounter");
-///////////////////////////////////////////////
-
 /////////     render categories    ///////////
 const renderCategories = (categories) => {
   console.log(categories);
@@ -66,7 +12,6 @@ const renderCategories = (categories) => {
     categoriesContainer.appendChild(categoryButton);
   });
 };
-
 ///////////////////////////////////////////////
 
 /////////     fetch categories    ///////////
@@ -130,6 +75,7 @@ const renderProducts = (products) => {
       cartProducts.push(product);
       console.log("cartProducts", cartProducts);
       renderCart(product);
+      addToLocalStorage(cartProducts);
       counter.innerHTML = cartProducts.length;
     };
     info.append(addToCart);

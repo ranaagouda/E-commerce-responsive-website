@@ -5,6 +5,14 @@ let counter = document.getElementById("cartCounter");
 let cartIcon = document.getElementById("cartIcon");
 cartIcon.append(cart);
 
+/////////// local storage /////////////
+const addToLocalStorage = (cartProducts) => {
+  let string = JSON.stringify(cartProducts);
+  localStorage.setItem("cartProducts", string);
+  let retString = localStorage.getItem("cartProducts");
+  let retArray = JSON.parse(retString);
+  console.log(retArray);
+};
 ////////////////////////////////////////
 
 /////////   render cart item  /////////
@@ -47,6 +55,7 @@ const renderCart = (product) => {
   remove.onclick = function (product) {
     cartProduct.remove();
     cartProducts.pop(product);
+    addToLocalStorage(cartProducts);
     console.log("cartProducts", cartProducts);
     counter.innerHTML = cartProducts.length;
   };
