@@ -5,16 +5,6 @@ let counter = document.getElementById("cartCounter");
 let cartIcon = document.getElementById("cartIcon");
 cartIcon.append(cart);
 
-/////////// local storage /////////////
-const addToLocalStorage = (cartProducts) => {
-  let string = JSON.stringify(cartProducts);
-  localStorage.setItem("cartProducts", string);
-  let retString = localStorage.getItem("cartProducts");
-  let retArray = JSON.parse(retString);
-  console.log(retArray);
-};
-////////////////////////////////////////
-
 /////////   render cart item  /////////
 const renderCart = (product) => {
   // cartProduct
@@ -62,6 +52,28 @@ const renderCart = (product) => {
   removeContainer.append(remove);
 };
 ////////////////////////////////////////
+
+/////////// local storage /////////////
+
+const addToLocalStorage = (cartProducts) => {
+  let string = JSON.stringify(cartProducts);
+  localStorage.setItem("cartProducts", string);
+  let retString = localStorage.getItem("cartProducts");
+  let retArray = JSON.parse(retString);
+  console.log("retArray", retArray);
+};
+////////////////////////////////////////
+
+////////////  after refresh  /////////////
+
+let x = localStorage.getItem("cartProducts") || "[]";
+x = JSON.parse(x);
+x.forEach((product) => {
+  renderCart(product);
+  counter.innerHTML = x.length;
+  console.log("x", x);
+  cartProducts.push(product);
+});
 
 ////////////  show cart  /////////////
 cartIcon.onmouseover = function () {
