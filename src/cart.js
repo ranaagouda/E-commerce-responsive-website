@@ -1,19 +1,69 @@
-// localStorage.setItem("name", "rana");
-// const cat = localStorage.getItem("name");
-// console.log(cat);
-// counter delete update
-// on click > add to storage > read data > show cart
-
+//////////   initialization   ///////////
+let cartProducts = [];
+let cart = document.getElementById("cart");
+let counter = document.getElementById("cartCounter");
 let cartIcon = document.getElementById("cartIcon");
 cartIcon.append(cart);
 
-//////////// show cart /////////////
-let cartDisplay = document.getElementById("cart");
+////////////////////////////////////////
 
+/////////   render cart item  /////////
+const renderCart = (product) => {
+  // cartProduct
+  let cartProduct = document.createElement("div");
+  cartProduct.classList.add("cartProduct");
+  cart.append(cartProduct);
+  // imageBox
+  let imageBox = document.createElement("div");
+  imageBox.classList.add("imageBox");
+  cartProduct.append(imageBox);
+  // image
+  let imageCart = document.createElement("img");
+  imageCart.style.objectFit = "contain";
+  imageCart.src = product.image;
+  imageBox.append(imageCart);
+  //text
+  let text = document.createElement("div");
+  text.classList.add("text");
+  cartProduct.append(text);
+  // product description
+  let description = document.createElement("p");
+  description.classList.add("description");
+  description.textContent = product.description;
+  text.append(description);
+  // remove container
+  let removeContainer = document.createElement("div");
+  removeContainer.classList.add("flex", "flex-row", "justify-between", "pt-2");
+  text.append(removeContainer);
+  // price
+  let price = document.createElement("p");
+  price.classList.add("price");
+  price.textContent = product.price + " $";
+  removeContainer.append(price);
+  // remove
+  let remove = document.createElement("button");
+  remove.classList.add("removeButton");
+  remove.textContent = "Remove";
+  remove.onclick = function (product) {
+    cartProduct.remove();
+    cartProducts.pop(product);
+    console.log("cartProducts", cartProducts);
+    counter.innerHTML = cartProducts.length;
+  };
+  removeContainer.append(remove);
+};
+////////////////////////////////////////
+
+////////////  show cart  /////////////
 cartIcon.onmouseover = function () {
-  cartDisplay.style.display = "block";
+  cart.style.display = "block";
 };
+
+cart.onmouseover = function () {
+  cart.style.display = "block";
+};
+
 cartIcon.onmouseleave = function () {
-  cartDisplay.style.display = "none";
+  cart.style.display = "none";
 };
-/////////////////////////////////
+//////////////////////////////////////
