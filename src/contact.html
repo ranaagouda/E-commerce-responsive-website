@@ -55,7 +55,7 @@
               <div class="cartCounter" id="cartCounter">0</div>
               <div
                 id="cart"
-                class="top-14 z-10 bg-white items-center rounded fixed right-16 w-[400px] h-[50vh] overflow-y-scroll"
+                class="hidden top-14 z-10 bg-white items-center rounded fixed right-16 w-[400px] h-[50vh] overflow-y-scroll"
               ></div>
             </a>
             <a
@@ -92,7 +92,7 @@
               class="block min-h-[auto] w-full border-b border-gray-400 bg-[#f9f9f9] p-4 mb-6"
               placeholder="Full Name"
               required
-              onsubmit="validateName()"
+              onchange="validateName()"
             />
           </div>
           <!--Email input-->
@@ -103,7 +103,7 @@
               class="block min-h-[auto] w-full border-b border-gray-400 bg-[#f9f9f9] p-4 mb-6"
               placeholder="Email"
               required
-              onsubmit="validateEmail()"
+              onchange="validateEmail()"
             />
           </div>
           <!--Password input-->
@@ -114,7 +114,7 @@
               class="block min-h-[auto] w-full border-b border-gray-400 bg-[#f9f9f9] p-4 mb-6"
               placeholder="Password"
               required
-              onsubmit="validatePassword()"
+              onchange="validatePassword()"
             />
           </div>
           <!--Message textarea-->
@@ -151,7 +151,6 @@
     </div>
     <script src="cart.js"></script>
     <script src="validation.js"></script>
-    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
   </body>
 </html>
