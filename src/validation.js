@@ -21,7 +21,7 @@ function validateEmail() {
 function validatePassword() {
   //password
   var decimal =
-    /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+    "^(?=.*[a-z])(?=.*[A-Z])(?=.*d)(?=.*[@$!%*?&])[A-Za-zd@$!%*?&]{8,}$";
   let password = document.getElementById("password").value;
   if (password.match(decimal)) {
     alert(
