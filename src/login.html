@@ -89,19 +89,21 @@
             >
               Sign in
             </h1>
-            <form>
+            <form onsubmit="authUser()">
               <!-- Email input -->
               <div class="relative mb-8">
                 <input
+                  id="username"
                   type="text"
                   class="block min-h-[auto] w-full border-b border-gray-400 bg-[#f9f9f9] p-4 mb-6"
-                  placeholder="Email address"
+                  placeholder="Username"
                 />
               </div>
 
               <!-- Password input -->
               <div class="relative mb-8">
                 <input
+                  id="loginPassword"
                   type="password"
                   class="block min-h-[auto] w-full border-b border-gray-400 bg-[#f9f9f9] p-4 mb-6"
                   placeholder="Password"
@@ -171,7 +173,7 @@
       <!-- end footer-->
     </div>
     <script src="cart.js"></script>
-    <script src="validation.js"></script>
+    <script src="auth.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
   </body>
 </html>
