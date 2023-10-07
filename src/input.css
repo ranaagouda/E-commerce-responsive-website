@@ -122,6 +122,9 @@
   font-size: 1.125rem /* 18px */;
   font-weight: 900;
   padding: 1.25rem /* 20px */;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .cartProduct {
   display: flex;
