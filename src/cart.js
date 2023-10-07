@@ -64,16 +64,16 @@ const addToLocalStorage = (cartProducts) => {
 };
 ////////////////////////////////////////
 
-////////////  after refresh  /////////////
+////////////  at refresh  /////////////
 
-let x = localStorage.getItem("cartProducts") || "[]";
-x = JSON.parse(x);
-x.forEach((product) => {
+let onRefresh = localStorage.getItem("cartProducts") || "[]";
+onRefresh = JSON.parse(onRefresh);
+onRefresh.forEach((product) => {
   renderCart(product);
-  counter.innerHTML = x.length;
-  console.log("x", x);
+  counter.innerHTML = onRefresh.length;
   cartProducts.push(product);
 });
+console.log("onRefresh", onRefresh);
 
 ////////////  show cart  /////////////
 cartIcon.onmouseover = function () {
