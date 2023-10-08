@@ -76,7 +76,7 @@ onRefresh.forEach((product) => {
 console.log("onRefresh", onRefresh);
 
 ////////////  show cart  /////////////
-cartIcon.onmouseover = function () {
+cartIcon.onmouseenter = function () {
   cart.style.display = "block";
 };
 
