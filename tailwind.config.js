@@ -13,9 +13,6 @@ module.exports = {
       fontFamily: {
         body: ["Cairo"],
       },
-      height: {
-        hh: "400px",
-      },
     },
   },
   corePlugins: {
