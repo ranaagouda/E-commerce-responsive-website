@@ -80,9 +80,9 @@ cartIcon.onmouseenter = function () {
   cart.style.display = "block";
 };
 
-cart.onmouseover = function () {
-  cart.style.display = "block";
-};
+// cart.onmouseover = function () {
+//   cart.style.display = "block";
+// };
 
 cartIcon.onmouseleave = function () {
   cart.style.display = "none";
