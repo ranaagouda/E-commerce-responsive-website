@@ -102,7 +102,7 @@ const fetchProducts = (category) => {
 ///////////////////////////////////////////////
 
 /////////     scroll up button    ///////////
-let scrollUp = document.getElementsByClassName("scroll")[0];
+let scrollUp = document.getElementById("scroll");
 
 scrollUp.onclick = () => {
   window.scrollTo(0, 0);
